@@ -35,7 +35,7 @@ def convert_images_to_jpg(folder_path):
             file_path = os.path.join(folder_path, filename)
 
             # Check if the file is an image
-            if os.path.isfile(file_path) and any(filename.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff']):
+            if os.path.isfile(file_path) and any(filename.lower().endswith(ext) for ext in ['.jpeg', '.png', '.gif', '.bmp', '.tiff']):
                 # Open the image
                 image = Image.open(file_path)
 
@@ -49,7 +49,7 @@ def convert_images_to_jpg(folder_path):
                 print(f"Conversion successful. Image saved as {jpg_output_path}")
 
                 # Delete the original image if it's not already a JPG
-                if not filename.lower().endswith('.jpg') and not filename.lower().endswith('.jpeg'):
+                if not filename.lower().endswith('.jpg'):
                     os.remove(file_path)
                     print(f"Original file deleted: {file_path}")
 
