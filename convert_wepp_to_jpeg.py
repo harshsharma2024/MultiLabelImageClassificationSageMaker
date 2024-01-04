@@ -58,6 +58,7 @@ def convert_images_to_jpg(folder_path):
         
 # Example usage:
 folder_path = "prepare_data/img_clf_multilabel_lst/all_images_gt"
+# folder_path = "valid_data"
 convert_and_delete_webp_images(folder_path)
 convert_images_to_jpg(folder_path)
 
